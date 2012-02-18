@@ -17,9 +17,6 @@ echo "Put Homebrew location earlier in PATH ..."
 export PATH='/usr/local/bin:$PATH'" >> ~/.zshrc
   source ~/.zshrc
 
-echo "Installing Postgres, a good open source relational database ..."
-  brew install postgres --no-python
-
 echo "Installing Redis, a good key-value database ..."
   brew install redis
 
@@ -35,6 +32,9 @@ echo "Installing ImageMagick, good for cropping and re-sizing images ..."
 echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
   brew install qt
 
+echo "Installing Midnight Commander, because i'm old school like that ..."
+  brew install midnight-commander
+
 echo "Installing RVM (Ruby Version Manager) ..."
   bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
   echo "
@@ -42,5 +42,9 @@ echo "Installing RVM (Ruby Version Manager) ..."
 [[ -s '/Users/`whoami`/.rvm/scripts/rvm' ]] && source '/Users/`whoami`/.rvm/scripts/rvm'" >> ~/.zshrc
   source ~/.zshrc
 
-bash < <(curl -s https://raw.github.com/thoughtbot/laptop/master/ruby)
-bash < <(curl -s https://raw.github.com/thoughtbot/laptop/master/heroku)
+bash < <(curl -s https://raw.github.com/cobrakai/laptop/master/ruby)
+bash < <(curl -s https://raw.github.com/cobrakai/laptop/master/heroku)
+
+echo "Installing MySQL, don't forget the post install steps ..."
+  brew install mysql
+
